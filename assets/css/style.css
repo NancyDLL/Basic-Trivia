@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+.jumbotron{
+	background-color: #000d1a;
+	height: 1000px;
+	padding-top: 10px;
+}
+
+.jumbotron h1 {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 72px;
+	text-shadow:1px 1px 10px #cce6ff, 1px 1px 10px #cce6ff;
+	color: #3399ff;
+	text-align: center;
+}
+
+.jumbotron h2 {
+	text-align: center;
+	font-weight: normal;
+	color: #FFFFCC;
+	padding-bottom: 20px;
+}
+
+.jumbotron h3 {
+	text-align: center;
+	font-weight: normal;
+	font-size: 48px;
+	color: #3399ff;
+	padding-top: 0px;
+	padding-bottom: 30px;
+}
+
+.btn {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	color: #001a33;
+	margin-bottom: 20px;
+}
+
+.img-thumbnail{
+	width: 175px;
+	height: 175px;
+	margin-bottom: 40px;
+	margin-right: 5px;
+
+}
+
+#submitButton{
+	margin-top: 20px;
+}
+
+label {
+	padding-left: 5px;
+	font-size: 16px;
+	color: #FFFFCC;
+	text-align: center;
+}
+
+img{
+    vertical-align: middle;
+    float: left;
+}

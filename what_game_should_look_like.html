@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<title>Basic Trivia Game</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Nan Loyd-Leffingwell" />
+	<meta name="description" content="Basic Trivia Game" />
+	<meta name="classification" content="game" />
+	<meta name="copyright" content="&copy; 2017 Nan Loyd-Leffingwell" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Orbitron">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Know Your Nebulas!</h1>
+			<h2>In this game you will have 2 minutes to identify eight nebulas shown on screen. Select the "Start Game" button below to begin playing.</h2>
+			<div class="text-center">
+				<span id="timer">
+					<h3>Count Down</h3>
+				</span>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<span id="firstNebula" class="nebula">
+						<img src="assets/images/x.jpg" class="img-thumbnail">
+						<form>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 1</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 2</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 3</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 4</label>
+						</form>
+					</span>
+				</div>
+				<div class="col-md-3">
+					<span id="secondNebula" class="nebula">
+						<img src="assets/images/x.jpg" class="img-thumbnail">
+						<form>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 1</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 2</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 3</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 4</label>
+						</form>
+					</span>
+				</div>
+				<div class="col-md-3">
+					<span id="thirdNebula" class="nebula">
+						<img src="assets/images/x.jpg" class="img-thumbnail">
+						<form>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 1</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 2</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 3</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 4</label>
+						</form>
+					</span>
+				</div>
+				<div class="col-md-3">
+					<span id="fourthNebula" class="nebula">
+						<img src="assets/images/x.jpg" class="img-thumbnail">
+						<form>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 1</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 2</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 3</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 4</label>
+						</form>
+					</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<span id="fifthNebula" class="nebula">
+						<img src="assets/images/x.jpg" class="img-thumbnail">
+						<form>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 1</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 2</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 3</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 4</label>
+						</form>
+					</span>
+				</div>
+				<div class="col-md-3">
+					<span id="sixthNebula" class="nebula">
+						<img src="assets/images/x.jpg" class="img-thumbnail">
+						<form>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 1</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 2</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 3</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 4</label>
+						</form>
+					</span>
+				</div>
+				<div class="col-md-3">
+					<span id="seventhNebula" class="nebula">
+						<img src="assets/images/x.jpg" class="img-thumbnail">
+						<form>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 1</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 2</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 3</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 4</label>
+						</form>
+					</span>
+				</div>
+				<div class="col-md-3">
+					<span id="eigthNebula" class="nebula">
+						<img src="assets/images/x.jpg" class="img-thumbnail">
+						<form>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 1</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 2</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 3</label><br>
+						  <input type="radio" name="opt" value="thing"><label for="option">Option 4</label>
+						</form>
+					</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="text-center">
+					<div id="submitButton">
+						<button id="submit" class="btn btn-default btn-lg">Submit Your Answers</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>

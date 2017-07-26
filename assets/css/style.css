@@ -6,6 +6,12 @@
 	padding-top: 10px;
 }
 
+.container{
+	margin-right: 10px; 
+    margin-left: 10px;
+    width: 100%;
+}
+
 .jumbotron h1 {
 	font-family: 'Orbitron', sans-serif;
 	font-weight: bold;
@@ -54,11 +60,10 @@
 label {
 	padding-left: 5px;
 	font-size: 16px;
+	font-weight: normal;
 	color: #FFFFCC;
-	text-align: center;
 }
 
 img{
-    vertical-align: middle;
     float: left;
 }

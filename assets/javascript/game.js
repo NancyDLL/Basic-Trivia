@@ -3,15 +3,28 @@ console.log("js for Basic Trivia game connected.")
 
 $("#start").on("click", function() {
 	console.log("start button clicked")
-	$("#timer").replaceWith("<h3>Count Down</h3>")
+	$("#timer").replaceWith("<h3>Count Down</h3>");
 
 	setTimeout(timeUp, 1000*120);
-		console.log("120 seconds left");
+		console.log("120 seconds started");
+	$("#firstNebula").append("<img src='assets/images/bubble.png' class='img-thumbnail'><form><input type='radio' name='opt' value='right'><label for='option'>Bubble</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Option 2</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Option 3</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Option 4</label></form>");
+	$("#secondNebula").append("");
+	$("#thirdNebula").append("");
+	$("#fourthNebula").append("");
+	$("#fifthNebula").append("");
+	$("#sixthNebula").append("");
+	$("#seventhNebula").append("");
+	$("#eigthNebula").append("");
+	$("#submitButton").append("<button id='submit' class='btn btn-default btn-lg'>Submit Your Answers</button>");
 
 	function timeUp() {
 		console.log("time is up");
 		grade();
 	}
+
+	$("#submit").on("click", function() {
+		grade();
+	});
 
 	function grade() {
 		console.log("Grade function runs and displays results")
@@ -23,14 +36,14 @@ $("#start").on("click", function() {
 
 // * * * PSUEDOCODE & REQUIREMENTS * * *
 // √ 1.0 Click Start to start the game.
-// 1.1 A timer starts to count down - a minimum of 120 seconds.
+// √ 1.1 A timer starts to count down - a minimum of 120 seconds.
 // 1.2 Once timer reaches it's limit, then the correct, incorrect, and unanswered are counted - invoke grade function.
 // 1.2.1 JQuery to display the incorrect, incorrect, and unanswered counts html.
 
 // 2.0 JQuery populates the html with 8 questions.
 // 2.1 Each question has four input boxes but only one is correct.
 // √ 2.2 Do not allow the selection of more then one answer.
-// 2.3 User clicks "done" or "submit" for the correct, incorrect, and unanswered are counted - invoke grade function.
+// √ 2.3 User clicks "done" or "submit" for the correct, incorrect, and unanswered are counted - invoke grade function.
 // 2.3.1 Use JQuery to display the incorrect, incorrect, and unanswered counts html.
 
 // * * * ACTION ITEMS & TO D0 * * * 
@@ -40,4 +53,4 @@ $("#start").on("click", function() {
 // √ 1.0 Pick theme for the game. - "Out of this World - Know your Nedulas"
 // √ 2.0 Create 8 questions based on that theme.
 // √ 3.0 Build how the HTML should render and identify which elements will be built with JQuery.
-// 4.0 Start to code the logic for JS, use console.log to validate as you build.
+// √ 4.0 Start to code the logic for JS, use console.log to validate as you build.

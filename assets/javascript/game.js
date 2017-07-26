@@ -7,14 +7,14 @@ $("#start").on("click", function() {
 
 	setTimeout(timeUp, 1000*120);
 		console.log("120 seconds started");
-	$("#firstNebula").append("<img src='assets/images/bubble.png' class='img-thumbnail'><form><input type='radio' name='opt' value='right'><label for='option'>Bubble</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Option 2</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Option 3</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Option 4</label></form>");
-	$("#secondNebula").append("");
-	$("#thirdNebula").append("");
-	$("#fourthNebula").append("");
-	$("#fifthNebula").append("");
-	$("#sixthNebula").append("");
-	$("#seventhNebula").append("");
-	$("#eigthNebula").append("");
+	$("#firstNebula").append("<img src='assets/images/bubble.png' class='img-thumbnail'><form><input type='radio' name='opt' value='right'><label for='option'>Bubble</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Orion</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Horsehead</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Trifid</label></form>");
+	$("#secondNebula").append("<img src='assets/images/butterfly.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Ring</label><br><input type='radio' name='opt' value='right'><label for='option'>Butterfly</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Lagoon</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Eskimo</label></form>");
+	$("#thirdNebula").append("<img src='assets/images/cats_eye.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Omega</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Owl</label><br><input type='radio' name='opt' value='right'><label for='option'>Cat's Eye</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Veil</label></form>");
+	$("#fourthNebula").append("<img src='assets/images/crab.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Tarantula</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Flame</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Egg</label><br><input type='radio' name='opt' value='right'><label for='option'>Crab</label></form>");
+	$("#fifthNebula").append("<img src='assets/images/eagle.png' class='img-thumbnail'><form><input type='radio' name='opt' value='right'><label for='option'>Eagle</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Heart</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Ghost</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Pelican</label></form>");
+	$("#sixthNebula").append("<img src='assets/images/monkey_head.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Wolf</label><br><input type='radio' name='opt' value='right'><label for='option'>Monkey Head</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Red Square</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Cone</label></form>");
+	$("#seventhNebula").append("<img src='assets/images/retina.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Iris</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Boomerang</label><br><input type='radio' name='opt' value='right'><label for='option'>Retina</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Egg</label></form>");
+	$("#eigthNebula").append("<img src='assets/images/swan.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Bubble</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Eskimo</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Heart</label><br><input type='radio' name='opt' value='right'><label for='option'>Swan</label></form>");
 	$("#submitButton").append("<button id='submit' class='btn btn-default btn-lg'>Submit Your Answers</button>");
 
 	function timeUp() {
@@ -30,8 +30,10 @@ $("#start").on("click", function() {
 		console.log("Grade function runs and displays results")
 		var right = 0;
 		var wrong = 0;
-		$("#gameField").replaceWith("<h3>Your Score is</h3>")
+		$("h3").empty();
+		$("#gameField").replaceWith("<h4>Your Score is:</h4>");
 	}
+
 });
 
 // * * * PSUEDOCODE & REQUIREMENTS * * *

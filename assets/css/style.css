@@ -44,6 +44,22 @@
 	color: #3399ff;
 	padding-top: 0px;
 }
+.jumbotron h5 {
+	text-align: center;
+	font-weight: normal;
+	font-size: 38px;
+	color: #3399ff;
+	padding-top: 0px;
+}
+
+#display{
+	text-align: center;
+	font-weight: normal;
+	font-size: 36px;
+	color: #3399ff;
+	padding-top: 0px;
+	margin-bottom: 20px;
+}
 
 .btn {
 	font-family: 'Orbitron', sans-serif;

@@ -34,10 +34,11 @@ var stopwatch = {
 		}
 		if (minutes === 2) {
 			stopwatch.stop();
-			$("#display").empty();
 			var right = ($('input[value="right"]:checked').length);
 			var wrong = 8 - right;
-			$("#gameField").replaceWith("<h4>Your Score is:</h4><br><h5>Correct: " + right + "<br><h5>Incorrect: " + wrong);
+			$("h2").empty();
+			$(".text-center").empty();
+			$("#gameField").replaceWith("<h4>Your Score</h4><br><h5>Correct: " + right + "<br><h5>Incorrect: " + wrong);
 		}
 		return minutes + ":" + seconds;
 	}
@@ -66,7 +67,7 @@ $("#start").on("click", function() {
 		var wrong = 8 - right;
 		$("#display").empty();
 		$("h2").empty();
-		$("#gameField").replaceWith("<h4>Your Score is:</h4><br><h5>Correct: " + right + "<br><h5>Incorrect: " + wrong);
+		$("#gameField").replaceWith("<h4>Your Score</h4><br><h5>Correct: " + right + "<br><h5>Incorrect: " + wrong);
 	}
 });
 

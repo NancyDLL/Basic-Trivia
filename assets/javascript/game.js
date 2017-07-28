@@ -45,6 +45,7 @@ var stopwatch = {
 };
 
 $("#start").on("click", function() {
+	$(".started").empty();
 	$("#firstNebula").append("<img src='assets/images/bubble.png' class='img-thumbnail'><form><input type='radio' name='opt' value='right'><label for='option'>Bubble</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Orion</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Horsehead</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Trifid</label></form>");
 	$("#secondNebula").append("<img src='assets/images/butterfly.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Ring</label><br><input type='radio' name='opt' value='right'><label for='option'>Butterfly</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Lagoon</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Eskimo</label></form>");
 	$("#thirdNebula").append("<img src='assets/images/cats_eye.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Omega</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Owl</label><br><input type='radio' name='opt' value='right'><label for='option'>Cat's Eye</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Veil</label></form>");

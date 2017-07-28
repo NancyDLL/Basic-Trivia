@@ -1,7 +1,6 @@
-//1 - Check connection to html page
+//1 - Check to make sure the right JS file is connecting to the html.
 console.log("2nd version of js for Basic Trivia game connected.")
 
-//this is my clock
 var intervalId;
 var clockRunning = false;
 
@@ -66,6 +65,7 @@ $("#start").on("click", function() {
 		var right = ($('input[value="right"]:checked').length);
 		var wrong = 8 - right;
 		$("#display").empty();
+		$("h2").empty();
 		$("#gameField").replaceWith("<h4>Your Score is:</h4><br><h5>Correct: " + right + "<br><h5>Incorrect: " + wrong);
 	}
 });

@@ -1,12 +1,50 @@
-//1 - Check connection to html page
-console.log("js for Basic Trivia game connected.")
+//1 - Check to make sure the right JS file is connecting to the html.
+console.log("2nd version of js for Basic Trivia game connected.")
+
+var intervalId;
+var clockRunning = false;
+
+var stopwatch = {
+	time: 0,
+
+	start: function() {
+	    intervalId = setInterval(stopwatch.count, 1000);
+	    clockRunning = true;
+	},
+
+	stop: function() {
+		clearInterval(intervalId);
+		clockRunning = false;
+	},
+
+	count: function() {
+		stopwatch.time++;
+		var converted = stopwatch.timeConverter(stopwatch.time);
+		$("#display").html(converted);
+	 },
+
+	timeConverter: function(t) {
+		var minutes = Math.floor(t / 60);
+		var seconds = t - (minutes * 60);
+		if (seconds < 10) {
+		    seconds = "0" + seconds;
+		}
+		if (minutes === 0) {
+		    minutes = "00";
+		}
+		if (minutes === 2) {
+			stopwatch.stop();
+			var right = ($('input[value="right"]:checked').length);
+			var wrong = 8 - right;
+			$("h2").empty();
+			$(".text-center").empty();
+			$("#gameField").replaceWith("<h4>Time is up!</h4><br><h5>Your correct answers: " + right + "<br><h5>Your incorrect answers: " + wrong);
+		}
+		return minutes + ":" + seconds;
+	}
+};
 
 $("#start").on("click", function() {
-	console.log("start button clicked")
-	$("#timer").replaceWith("<h3>Count Down</h3>");
-
-	setTimeout(timeUp, 1000*120);
-		console.log("120 seconds started");
 	$("#firstNebula").append("<img src='assets/images/bubble.png' class='img-thumbnail'><form><input type='radio' name='opt' value='right'><label for='option'>Bubble</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Orion</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Horsehead</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Trifid</label></form>");
 	$("#secondNebula").append("<img src='assets/images/butterfly.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Ring</label><br><input type='radio' name='opt' value='right'><label for='option'>Butterfly</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Lagoon</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Eskimo</label></form>");
 	$("#thirdNebula").append("<img src='assets/images/cats_eye.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Omega</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Owl</label><br><input type='radio' name='opt' value='right'><label for='option'>Cat's Eye</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Veil</label></form>");
@@ -16,39 +54,34 @@ $("#start").on("click", function() {
 	$("#seventhNebula").append("<img src='assets/images/retina.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Iris</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Boomerang</label><br><input type='radio' name='opt' value='right'><label for='option'>Retina</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Egg</label></form>");
 	$("#eigthNebula").append("<img src='assets/images/swan.png' class='img-thumbnail'><form><input type='radio' name='opt' value='wrong'><label for='option'>Bubble</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Eskimo</label><br><input type='radio' name='opt' value='wrong'><label for='option'>Heart</label><br><input type='radio' name='opt' value='right'><label for='option'>Swan</label></form>");
 	$("#submitButton").append("<button id='submit' class='btn btn-default btn-lg'>Submit Your Answers</button>");
-
-	function timeUp() {
-		console.log("time is up");
-		grade();
-	}
+	$("#timer").replaceWith("<div id='display'>00:00</div>");
+	stopwatch.start();
 
 	$("#submit").on("click", function() {
-		clearTimeout(timeUp, 1000*0);
+		stopwatch.stop();
 		grade();
 	});
 
 	function grade() {
-		$("h3").empty();
 		var right = ($('input[value="right"]:checked').length);
 		var wrong = 8 - right;
-		console.log("Right answers = " + right);
-		console.log("Wrong answers = " + wrong);
-		$("#gameField").replaceWith("<h4>Your Score is:</h4>");
+		$("#display").empty();
+		$("h2").empty();
+		$("#gameField").replaceWith("<h4>Your Score</h4><br><h5>Your correct answers: " + right + "<br><h5>Your incorrect answers: " + wrong);
 	}
-
 });
 
 // * * * PSUEDOCODE & REQUIREMENTS * * *
 // √ 1.0 Click Start to start the game.
 // √ 1.1 A timer starts to count down - a minimum of 120 seconds.
-// 1.2 Once timer reaches it's limit, then the correct, incorrect, and unanswered are counted - invoke grade function.
-// 1.2.1 JQuery to display the incorrect, incorrect, and unanswered counts html.
+// √ 1.2 Once timer reaches it's limit, then the correct and incorrect are counted.
+// √ 1.2.1 JQuery to display the correct and incorrect counts html.
 
 // √ 2.0 JQuery populates the html with 8 questions.
 // √ 2.1 Each question has four input boxes but only one is correct.
 // √ 2.2 Do not allow the selection of more then one answer.
-// √ 2.3 User clicks "done" or "submit" for the correct, incorrect, and unanswered are counted - invoke grade function.
-// 2.3.1 Use JQuery to display the incorrect, incorrect, and unanswered counts html.
+// √ 2.3 User clicks "done" or "submit" for the correct and incorrect are counted - invoke grade function.
+// √ 2.3.1 Use JQuery to display the correct and incorrect counts html.
 
 // * * * ACTION ITEMS & TO D0 * * * 
 // √ 0.1 Create Repo and basic file structure.
